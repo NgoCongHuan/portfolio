@@ -41,9 +41,10 @@ export function Home() {
 
   const experience = [
     {
-      role: "Senior Data Engineer",
-      company: "Tech Corp",
-      period: "2022 - Present",
+      role: "Data Engineer",
+      company: "Financial Software Solutions",
+      logo: "/images/logo_fss.png",
+      period: "Aug 2025 - Present",
       description: "Leading data infrastructure initiatives, designing scalable pipelines processing 50TB+ daily. Reduced data latency by 60% through optimization.",
       responsibilities: [
         "Architected and deployed real-time data pipelines using Kafka and Flink",
@@ -53,9 +54,10 @@ export function Home() {
       ]
     },
     {
-      role: "Data Engineer",
-      company: "Analytics Inc",
-      period: "2019 - 2022",
+      role: "Data Analyst",
+      company: "Map Pacific Singapore",
+      logo: "/images/logo_mps.png",
+      period: "Aug 2024 - Feb 2025",
       description: "Built ETL pipelines using Airflow and Spark. Migrated on-premise data warehouse to cloud, improving performance by 3x.",
       responsibilities: [
         "Developed 20+ ETL pipelines processing 10TB daily",
@@ -63,42 +65,47 @@ export function Home() {
         "Created data quality monitoring framework",
         "Automated data ingestion from 15+ sources"
       ]
+    }
+  ];
+
+  const education = [
+    {
+      degree: "Data Science",
+      school: "Nguyen Tat Thanh University",
+      logo: "/images/logo_ntt.png",
+      period: "2022 - 2025",
+      description: "Focused on advanced data analytics, machine learning, big data technologies, and statistical modeling. Completed capstone project on real-time data pipeline optimization."
     },
     {
-      role: "Junior Data Engineer",
-      company: "Data Solutions Ltd",
-      period: "2017 - 2019",
-      description: "Developed data models and reports. Automated data quality checks reducing errors by 85%.",
-      responsibilities: [
-        "Built dimensional data models for analytics",
-        "Created automated testing framework",
-        "Developed dashboards using Tableau and Looker",
-        "Optimized SQL queries for better performance"
-      ]
-    },
+      degree: "Medicine",
+      school: "Nguyen Tat Thanh University",
+      logo: "/images/logo_ntt.png",
+      period: "2020 - 2022",
+      description: "Gained strong analytical and problem-solving skills through rigorous medical training. Developed expertise in data interpretation and critical thinking."
+    }
   ];
 
   const certifications = [
     {
       name: "Databricks Data Engineer Professional",
       issuer: "Databricks",
-      date: "2024",
+      date: "2028",
       verifyLink: "https://credentials.databricks.com/",
-      logo: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400"
+      logo: "/images/cert_dep.png"
     },
     {
       name: "Databricks Data Engineer Associate",
       issuer: "Databricks",
-      date: "2023",
+      date: "2028",
       verifyLink: "https://credentials.databricks.com/",
-      logo: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400"
+      logo: "/images/cert_dea.png"
     },
     {
       name: "AWS Certified Cloud Practitioner",
       issuer: "Amazon Web Services",
-      date: "2023",
+      date: "2028",
       verifyLink: "https://aws.amazon.com/verification",
-      logo: "https://images.unsplash.com/photo-1634632409665-fc2bdbb81959?w=400"
+      logo: "/images/cert_clf-c02.png"
     },
   ];
 
@@ -189,7 +196,7 @@ export function Home() {
             <div className="relative">
               <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl shadow-primary/20 ring-1 ring-primary/20">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1737575655055-e3967cbefd03?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBkZXZlbG9wZXIlMjBwb3J0cmFpdHxlbnwxfHx8fDE3NzQwNzY2Njh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  src="/images/avatar.jpg"
                   alt="Profile"
                   className="w-full h-full object-cover"
                 />
@@ -372,11 +379,16 @@ export function Home() {
 
                   <div className="md:ml-20 bg-gray-800 p-8 rounded-xl border border-gray-700 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all">
                     <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
-                      <div>
-                        <h3 className="text-2xl font-bold text-white">
-                          {job.role}
-                        </h3>
-                        <p className="text-lg text-primary">{job.company}</p>
+                      <div className="flex gap-4 items-start flex-1">
+                        <div className="w-16 h-16 flex-shrink-0 bg-gray-900 rounded-lg overflow-hidden flex items-center justify-center">
+                          <img src={job.logo} alt={job.company} className="w-full h-full object-cover" />
+                        </div>
+                        <div>
+                          <h3 className="text-2xl font-bold text-white">
+                            {job.role}
+                          </h3>
+                          <p className="text-lg text-primary">{job.company}</p>
+                        </div>
                       </div>
                       <div className="flex items-center gap-2 text-gray-400 mt-2 md:mt-0">
                         <Calendar className="w-4 h-4" />
@@ -425,11 +437,12 @@ export function Home() {
                 key={index}
                 className="bg-gray-900 rounded-xl border border-gray-800 overflow-hidden hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all"
               >
-                <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center p-8">
-                  <div className="text-center">
-                    <Award className="w-16 h-16 text-primary mx-auto mb-4" />
-                    <h3 className="text-lg font-bold text-white">{cert.issuer}</h3>
-                  </div>
+                <div className="aspect-[22/17] bg-gradient-to-br from-gray-800 to-gray-900 flex items-start justify-center overflow-hidden">
+                  <img
+                    src={cert.logo}
+                    alt={cert.name}
+                    className="w-full h-full object-cover object-top scale-100 hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-white mb-2">
@@ -468,44 +481,30 @@ export function Home() {
           </div>
 
           <div className="space-y-6">
-            <div className="bg-gray-800 p-8 rounded-xl border border-gray-700 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all">
-              <div className="flex items-start justify-between mb-4">
-                <div>
-                  <h3 className="text-2xl font-bold text-white mb-2">
-                    Bachelor of Science in Data Science
-                  </h3>
-                  <p className="text-lg text-primary">Nguyen Tat Thanh University</p>
+            {education.map((edu, index) => (
+              <div key={index} className="bg-gray-800 p-8 rounded-xl border border-gray-700 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all">
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
+                  <div className="flex gap-4 items-start flex-1">
+                    <div className="w-16 h-16 flex-shrink-0 bg-gray-900 rounded-lg overflow-hidden flex items-center justify-center">
+                      <img src={edu.logo} alt={edu.school} className="w-full h-full object-cover" />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-white mb-2">
+                        {edu.degree}
+                      </h3>
+                      <p className="text-lg text-primary">{edu.school}</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-2 text-gray-400 mt-2 md:mt-0">
+                    <Calendar className="w-4 h-4" />
+                    <span>{edu.period}</span>
+                  </div>
                 </div>
-                <div className="flex items-center gap-2 text-gray-400">
-                  <Calendar className="w-4 h-4" />
-                  <span>2022 - 2025</span>
-                </div>
+                <p className="text-gray-300">
+                  {edu.description}
+                </p>
               </div>
-              <p className="text-gray-300">
-                Focused on advanced data analytics, machine learning, big data technologies,
-                and statistical modeling. Completed capstone project on real-time data pipeline
-                optimization.
-              </p>
-            </div>
-
-            <div className="bg-gray-800 p-8 rounded-xl border border-gray-700 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all">
-              <div className="flex items-start justify-between mb-4">
-                <div>
-                  <h3 className="text-2xl font-bold text-white mb-2">
-                    Bachelor of Science in General Medicine
-                  </h3>
-                  <p className="text-lg text-primary">Nguyen Tat Thanh University</p>
-                </div>
-                <div className="flex items-center gap-2 text-gray-400">
-                  <Calendar className="w-4 h-4" />
-                  <span>2020 - 2022</span>
-                </div>
-              </div>
-              <p className="text-gray-300">
-                Gained strong analytical and problem-solving skills through rigorous medical
-                training. Developed expertise in data interpretation and critical thinking.
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -632,7 +631,7 @@ export function Home() {
                     onChange={handleChange}
                     placeholder="Your name"
                     required
-                    className="mt-1 bg-gray-800 border-gray-700 text-white placeholder:text-gray-500 focus:border-primary"
+                    className="mt-3 bg-gray-800 border-gray-700 text-white placeholder:text-gray-500 focus:border-primary"
                   />
                 </div>
 
@@ -646,7 +645,7 @@ export function Home() {
                     onChange={handleChange}
                     placeholder="your.email@example.com"
                     required
-                    className="mt-1 bg-gray-800 border-gray-700 text-white placeholder:text-gray-500 focus:border-primary"
+                    className="mt-3 bg-gray-800 border-gray-700 text-white placeholder:text-gray-500 focus:border-primary"
                   />
                 </div>
 
@@ -660,7 +659,7 @@ export function Home() {
                     onChange={handleChange}
                     placeholder="What's this about?"
                     required
-                    className="mt-1 bg-gray-800 border-gray-700 text-white placeholder:text-gray-500 focus:border-primary"
+                    className="mt-3 bg-gray-800 border-gray-700 text-white placeholder:text-gray-500 focus:border-primary"
                   />
                 </div>
 
@@ -674,7 +673,7 @@ export function Home() {
                     placeholder="Your message..."
                     required
                     rows={6}
-                    className="mt-1 bg-gray-800 border-gray-700 text-white placeholder:text-gray-500 focus:border-primary"
+                    className="mt-3 bg-gray-800 border-gray-700 text-white placeholder:text-gray-500 focus:border-primary"
                   />
                 </div>
 
@@ -697,10 +696,10 @@ export function Home() {
                   <div>
                     <h4 className="font-semibold text-white mb-1">Email</h4>
                     <a
-                      href="mailto:huan@example.com"
+                      href="mailto:work.ngoconghuan@gmail.com"
                       className="text-primary hover:underline"
                     >
-                      huan@example.com
+                      work.ngoconghuan@gmail.com
                     </a>
                   </div>
                 </div>
@@ -712,10 +711,10 @@ export function Home() {
                   <div>
                     <h4 className="font-semibold text-white mb-1">Phone</h4>
                     <a
-                      href="tel:+1234567890"
+                      href="tel:+84706996998"
                       className="text-primary hover:underline"
                     >
-                      +1 (234) 567-890
+                      0706 996 998
                     </a>
                   </div>
                 </div>
