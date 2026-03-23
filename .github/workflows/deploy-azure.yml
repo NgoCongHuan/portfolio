@@ -39,12 +39,9 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Copy web.config to dist
-        run: cp web.config dist/web.config
-
       - name: Deploy to Azure App Service
         uses: azure/webapps-deploy@v3
         with:
           app-name: ${{ secrets.AZURE_APP_NAME }}
           publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
-          package: "./dist"
+          package: "./"
