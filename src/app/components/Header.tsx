@@ -10,10 +10,8 @@ export function Header() {
     { id: "experience", label: "Experience" },
     { id: "projects", label: "Projects" },
     { id: "skills", label: "Skills" },
-    
     { id: "certifications", label: "Certifications" },
     { id: "education", label: "Education" },
-    
     { id: "contact", label: "Contact" },
   ];
 
@@ -58,9 +56,13 @@ export function Header() {
         <div className="flex justify-between items-center h-16">
           <button
             onClick={() => scrollToSection("about")}
-            className="font-bold text-xl text-white hover:text-primary transition-colors"
+            className="flex items-center"
           >
-            Huan.Ngo
+            <img
+              src="/favicon.png"
+              alt="Logo"
+              className="h-8 w-auto object-contain"
+            />
           </button>
 
           {/* Desktop Navigation */}
