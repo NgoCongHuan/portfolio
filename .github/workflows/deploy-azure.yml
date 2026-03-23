@@ -19,8 +19,16 @@ jobs:
           node-version: "22"
           cache: "npm"
 
+      - name: Verify Node.js and npm
+        run: |
+          node --version
+          npm --version
+
+      - name: Clean npm cache
+        run: npm cache clean --force
+
       - name: Install dependencies
-        run: npm install
+        run: npm install --legacy-peer-deps
 
       - name: Build project
         run: npm run build
