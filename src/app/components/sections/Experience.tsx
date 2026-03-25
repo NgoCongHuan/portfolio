@@ -19,12 +19,12 @@ const experienceData = [
     company: "Map Pacific Singapore",
     logo: "/images/logo_mps.png",
     period: "Aug 2024 - Feb 2025",
-    description: "Built ETL pipelines using Airflow and Spark. Migrated on-premise data warehouse to cloud, improving performance by 3x.",
+    description: "Worked as a Data Analyst while also taking on Data Engineering responsibilities.",
     responsibilities: [
-      "Developed 20+ ETL pipelines processing 10TB daily",
-      "Migrated on-premise warehouse to Snowflake",
-      "Created data quality monitoring framework",
-      "Automated data ingestion from 15+ sources"
+      "Designed a centralized data warehouse to integrate data across departments, including Marketing and Sales",
+      "Developed ETL pipelines and orchestrated workflows using Apache Airflow",
+      "Created Power BI dashboards to monitor key business metrics",
+      "Performed data analysis to generate actionable insights for stakeholders"
     ]
   }
 ];

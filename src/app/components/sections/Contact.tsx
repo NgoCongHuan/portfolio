@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Github, Linkedin } from "lucide-react";
+import { Mail, Phone, MapPin, Github, Linkedin, Facebook } from "lucide-react";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import { Label } from "../ui/label";
@@ -163,25 +163,34 @@ export function Contact() {
                 </h4>
                 <div className="flex gap-4">
                   <a
-                    href="https://github.com"
+                    href="https://www.facebook.com/huan.ngo.94214/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 bg-gray-800 text-gray-300 rounded-lg flex items-center justify-center hover:bg-gray-700 hover:text-white border border-gray-700 transition-all"
+                    className="w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center hover:bg-primary-hover border border-primary transition-all"
+                    aria-label="Facebook"
+                  >
+                    <Facebook className="w-5 h-5" />
+                  </a>
+                  <a
+                    href="https://github.com/NgoCongHuan"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center hover:bg-primary-hover border border-primary transition-all"
                     aria-label="GitHub"
                   >
                     <Github className="w-5 h-5" />
                   </a>
                   <a
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/in/huanngocong/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 bg-blue-600 text-white rounded-lg flex items-center justify-center hover:bg-blue-700 border border-blue-500 transition-all"
+                    className="w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center hover:bg-primary-hover border border-primary transition-all"
                     aria-label="LinkedIn"
                   >
                     <Linkedin className="w-5 h-5" />
                   </a>
                   <a
-                    href="mailto:huan@example.com"
+                    href="mailto:pers.ngoconghuan@gmail.com"
                     className="w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center hover:bg-primary-hover border border-primary transition-all"
                     aria-label="Email"
                   >

@@ -14,14 +14,17 @@ export function About() {
               Data Engineer
             </p>
             <p className="text-xl text-gray-300 mb-6">
-              I'm a passionate Data Engineer specializing in building scalable data solutions,
-              optimizing cloud infrastructure, and delivering actionable insights through modern
-              data technologies.
+              “Life begins at the end of your comfort zone” – This is my life motto. 
+              I made the bold decision to leave medical school after two years and 
+              switch to Information Technology, where I discovered my true passion 
+              for technology, especially working with data.
             </p>
             <p className="text-lg text-gray-400 mb-8">
-              My expertise spans the entire data lifecycle - from ingestion and transformation
-              to warehousing and analytics. I'm committed to building efficient, reliable systems
-              that turn raw data into valuable insights.
+              I am a disciplined and constantly evolving person, 
+              which allows me to quickly adapt to new tools and technologies. 
+              With the knowledge and experience I have gained, 
+              I am confident in my ability to transform data into valuable insights 
+              that help drive smarter, data-driven decisions for the company.
             </p>
             <div className="flex flex-wrap gap-4">
               <button
