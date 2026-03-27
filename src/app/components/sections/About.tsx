@@ -63,10 +63,10 @@ export function About() {
 
           {/* Content */}
           <div className="lg:col-span-7 order-2 space-y-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-900/50 border border-gray-800 rounded-full">
+            {/* <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-900/50 border border-gray-800 rounded-full">
               <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
               <span className="text-sm text-gray-300">Available for opportunities</span>
-            </div>
+            </div> */}
 
             <div>
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-4">
@@ -105,11 +105,11 @@ export function About() {
             {/* Stats cards */}
             <div className="grid grid-cols-3 gap-4">
               <div className="p-4 bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl hover:border-primary/50 transition-all group">
-                <div className="text-3xl font-bold text-primary mb-1 group-hover:scale-110 transition-transform">5+</div>
+                <div className="text-3xl font-bold text-primary mb-1 group-hover:scale-110 transition-transform">1+</div>
                 <div className="text-sm text-gray-400">Years Exp.</div>
               </div>
               <div className="p-4 bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl hover:border-primary/50 transition-all group">
-                <div className="text-3xl font-bold text-primary mb-1 group-hover:scale-110 transition-transform">50+</div>
+                <div className="text-3xl font-bold text-primary mb-1 group-hover:scale-110 transition-transform">3+</div>
                 <div className="text-sm text-gray-400">Projects</div>
               </div>
               <div className="p-4 bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl hover:border-primary/50 transition-all group">
